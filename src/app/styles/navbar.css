@@ -1,0 +1,58 @@
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  margin-right: 20px;
+  flex-wrap: wrap; /* Allow links to wrap in smaller screens */
+}
+
+.navbar-link {
+  display: flex;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Add hover effect for links */
+.navbar-link:hover {
+  color: blue;
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .navbar-brand {
+    margin: 10px 0; /* Add margin for spacing */
+  }
+
+  .navbar-links {
+    width: 100%; /* Make links take full width */
+    justify-content: center; /* Center the links */
+  }
+
+  .navbar-link {
+    margin: 5px 0; /* Reduce margin for smaller screens */
+    width: 100%; /* Make each link take full width */
+    justify-content: center; /* Center align the link text */
+    text-align: center; /* Center the text */
+  }
+}

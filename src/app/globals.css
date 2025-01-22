@@ -1,21 +1,79 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body{
+  margin: 0px !important;
+  padding: 0px !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.cards {
+ display: grid;
+ grid-template-columns: auto auto auto auto;
+ column-gap: 25px;
+ row-gap: 15px;
+ align-items: center;
+ justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.select {
+  padding: 5px;
+  font-size: 18px;
+}
+
+.filter option{
+  width: 150px;
+}
+.container .search{
+  margin-left: 400px;
+}
+
+.navegation{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.btn-navegation {
+  height: 50px;
+  width: 100px;
+  background: blue;
+  color: white;
+  margin: 0px 10px;
+}
+
+@media (min-width: 720) and (max-width: 1280) {
+  .cards {
+    grid-template-columns: auto auto ;
+    column-gap: 25px;
+    row-gap: 20px;
+   }
+   .container .search{
+    margin-left: 30px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 420) {
+  .cards {
+    grid-template-columns: auto ;
+    column-gap: 20px;
+    row-gap: 15px;
+    margin-top: 200px;
+   }
+
+   .container {
+    display: block;
+    align-items: center;
+    margin-top: 180px;
+  }
+   .container .search{
+    margin-left: 20px;
+    margin-top: 10px;
+  }
 }
