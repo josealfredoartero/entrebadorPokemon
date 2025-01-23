@@ -3,7 +3,7 @@ import axios from "axios";
 import { getPokemonsFilter } from "./getPokemons";
 // trae la lista de tipos de pokemons
 export const getTypes = async () => {
-    const types = await axios.get<any>("https://pokeapi.co/api/v2/type?&limit=21");
+    const types = await axios.get<any>(`${process.env.NEXT_PUBLIC_API_URL}type?&limit=21`);
 
     return types.data.results;
 }

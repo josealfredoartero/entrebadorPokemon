@@ -32,8 +32,7 @@ const PokemonId = () => {
     if(pokemon == undefined){
         return <div>Loading ...</div>
     }
-    
-    
+     
   return (
     <div className="card-detalles">
         <div className="addPokemon">

@@ -3,7 +3,7 @@ import {Pokemon, PokemonResponse, Pokemons} from "@/types/pokemon"
 import { getPokemon } from "./getPokemon";
 // peticiion para traer la lista de los pokemons
 export const getListPokemons = async () => {
-      const response = await axios.get<PokemonResponse>("https://pokeapi.co/api/v2/pokemon?limit=80");
+      const response = await axios.get<PokemonResponse>(`${process.env.NEXT_PUBLIC_API_URL}pokemon?limit=80`);
       // llama la petion para traer los datos de lo lista de pokemons
       const pokemons = getPokemons(response.data.results);
       // retornando los datos del pokemon
